@@ -8,7 +8,7 @@ export default ({ back }) => (
     <div className='fixed flex flex-col items-center justify-center space-y-12 px-12 py-24 h-screen'>
         {back && (
             <Link to='/'>
-                <div className='absolute top-10 left-10 flex flex-col space-y-1 items-center text-center text-gray-600'>
+                <div className='absolute top-10 left-10 flex flex-col space-y-1 items-center text-center'>
                     <svg
                         className='w-6 fill-current'
                         xmlns='http://www.w3.org/2000/svg'
@@ -23,7 +23,7 @@ export default ({ back }) => (
                             d='M10 19l-7-7m0 0l7-7m-7 7h18'
                         />
                     </svg>
-                    <span className='text-xs'>Back Home</span>
+                    <span className='text-xs font-light'>Back Home</span>
                 </div>
             </Link>
         )}
@@ -34,7 +34,11 @@ export default ({ back }) => (
                 href='https://snapchat.com'
                 className='w-6'
             >
-                <img src={Snapchat} />
+                <img
+                    src={Snapchat}
+                    alt='Snapchat'
+                    title='Follow us on Snapchat'
+                />
             </a>
             <a
                 target='_blank'
@@ -42,7 +46,11 @@ export default ({ back }) => (
                 href='https://instagram.com'
                 className='w-6'
             >
-                <img src={Instagram} />
+                <img
+                    src={Instagram}
+                    alt='Instagram'
+                    title='Follow us on Instagram'
+                />
             </a>
             <a
                 target='_blank'
@@ -50,7 +58,11 @@ export default ({ back }) => (
                 href='https://facebook.com'
                 className='w-6'
             >
-                <img src={Facebook} />
+                <img
+                    src={Facebook}
+                    alt='Facebook'
+                    title='Follow us on Facebook'
+                />
             </a>
         </div>
     </div>
