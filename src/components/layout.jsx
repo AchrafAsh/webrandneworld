@@ -1,8 +1,10 @@
 import * as React from 'react'
 import Sidebar from './sidebar'
+import SEO from './SEO'
 
-export default ({ back, children }) => (
+export default ({ title, back, children }) => (
     <>
+        <SEO title={title} />
         <main className='flex flex-row min-h-screen w-full'>
             <Sidebar back={back} />
             <section className='w-full pl-24'>{children}</section>

@@ -6,7 +6,7 @@ import Cover3 from '../images/cover_3.png'
 import TopTitle from '../components/TopTitle'
 
 export default () => (
-    <Layout back>
+    <Layout title='Yakel Mayers' back>
         <div className='flex flex-col items-center'>
             <TopTitle artist='yakel-mayers' />
             <div className='w-full flex flex-col items-center space-y-12 py-12'>

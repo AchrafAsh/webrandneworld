@@ -4,10 +4,9 @@ import Layout from '../components/layout'
 
 import cover from '../images/cover.png'
 
-// markup
 const IndexPage = () => {
     return (
-        <Layout>
+        <Layout title='Home'>
             <div className='w-full h-full flex justify-center items-center'>
                 <div className='w-full flex flex-row justify-center items-center space-x-12'>
                     <Link to='/mazing-day'>
