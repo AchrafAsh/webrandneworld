@@ -6,7 +6,7 @@ import cover from '../images/cover.png'
 
 const IndexPage = () => {
     return (
-        <Layout title='Home'>
+        <Layout title='Home' hide>
             <div className='w-full h-full flex justify-center items-center'>
                 <div className='w-full flex flex-row justify-center items-center space-x-12'>
                     <Link to='/mazing-day'>
