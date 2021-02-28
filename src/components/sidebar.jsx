@@ -1,7 +1,5 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import Instagram from '../images/Instagram.png'
-import Snapchat from '../images/Snapchat.png'
 
 export default ({ back }) => (
     <div className='fixed flex flex-col items-center justify-center space-y-12 px-12 py-24 h-screen'>
