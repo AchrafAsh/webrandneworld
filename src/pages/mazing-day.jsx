@@ -1,19 +1,55 @@
 import * as React from 'react'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import Layout from '../components/layout'
-import Cover1 from '../images/cover_1.png'
-import Cover2 from '../images/cover_2.png'
-import Cover3 from '../images/cover_3.png'
-import TopTitle from '../components/TopTitle'
+import { TopTitle, YoutubeEmbed } from '../components/index'
 
-export default () => (
-    <Layout title='Mazing Day' back>
-        <div className='flex flex-col items-center'>
-            <TopTitle artist='mazing-day' />
-            <div className='w-full flex flex-col items-center space-y-12 py-12'>
-                <img src={Cover1} alt='' />
-                <img src={Cover2} alt='' />
-                <img src={Cover3} alt='' />
+export const data = graphql`
+    {
+        covers: allContentfulCover(filter: { artist: { eq: "Mazing Day" } }) {
+            edges {
+                node {
+                    id
+                    titre
+                    type
+                    youtube
+                    image {
+                        fixed(width: 250, height: 200) {
+                            ...GatsbyContentfulFixed
+                        }
+                        fluid {
+                            ...GatsbyContentfulFluid_tracedSVG
+                        }
+                    }
+                }
+            }
+        }
+    }
+`
+
+export default ({ data }) => {
+    return (
+        <Layout title='Mazing Day' back>
+            <div className='flex flex-col items-center'>
+                <TopTitle artist='mazing-day' />
+                <div className='w-full max-w-4xl flex flex-col items-center space-y-12 py-12'>
+                    {data &&
+                        data.covers &&
+                        data.covers.edges.map(({ node }) => (
+                            <div className='w-full' key={node.id}>
+                                {node.type === 'youtube' ? (
+                                    <YoutubeEmbed link={node.youtube} />
+                                ) : (
+                                    <Img
+                                        fluid={node.image.fluid}
+                                        title={node.titre}
+                                        alt={node.titre}
+                                    />
+                                )}
+                            </div>
+                        ))}
+                </div>
             </div>
-        </div>
-    </Layout>
-)
+        </Layout>
+    )
+}
