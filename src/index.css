@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'Lemon Milk';
+    src: url('./fonts/lemon_milk/LEMONMILK-Bold.otf');
+    /* src: url('./fonts/lemon_milk/LEMONMILK-BoldItalic.otf'); */
+    src: url('./fonts/lemon_milk/LEMONMILK-Medium.otf');
+    /* src: url('./fonts/lemon_milk/LEMONMILK-MediumItalic.otf'); */
+    src: url('./fonts/lemon_milk/LEMONMILK-Regular.otf');
+    /* src: url('./fonts/lemon_milk/LEMONMILK-RegularItalic.otf'); */
+    src: url('./fonts/lemon_milk/LEMONMILK-Light.otf');
+    /* src: url('./fonts/lemon_milk/LEMONMILK-LightItalic.otf'); */
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
