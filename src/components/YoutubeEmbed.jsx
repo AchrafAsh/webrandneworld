@@ -2,7 +2,7 @@ import * as React from 'react'
 
 export default ({ link }) => (
     <iframe
-        className='mx-auto w-full max-h-screen'
+        className='mx-auto w-full max-h-80 sm:max-h-screen'
         height='512'
         src={link}
         frameBorder='0'
