@@ -1,8 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import Layout from '../components/layout'
-import { TopTitle, YoutubeEmbed } from '../components/index'
+import { TopTitle, CoverList } from '../components/index'
 
 export const data = graphql`
     {
@@ -32,23 +31,7 @@ export default ({ data }) => {
         <Layout title='Mazing Day' back>
             <div className='flex flex-col items-center font-lemon font-medium'>
                 <TopTitle artist='mazing-day' />
-                <div className='w-full max-w-4xl flex flex-col items-center space-y-12 py-12'>
-                    {data &&
-                        data.covers &&
-                        data.covers.edges.map(({ node }) => (
-                            <div className='w-full' key={node.id}>
-                                {node.type === 'youtube' ? (
-                                    <YoutubeEmbed link={node.youtube} />
-                                ) : (
-                                    <Img
-                                        fluid={node.image.fluid}
-                                        title={node.titre}
-                                        alt={node.titre}
-                                    />
-                                )}
-                            </div>
-                        ))}
-                </div>
+                {data && <CoverList covers={data.covers} />}
             </div>
         </Layout>
     )
