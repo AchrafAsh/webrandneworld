@@ -30,7 +30,7 @@ export const data = graphql`
 export default ({ data }) => {
     return (
         <Layout title='Mazing Day' back>
-            <div className='flex flex-col items-center'>
+            <div className='flex flex-col items-center font-lemon font-medium'>
                 <TopTitle artist='mazing-day' />
                 <div className='w-full max-w-4xl flex flex-col items-center space-y-12 py-12'>
                     {data &&

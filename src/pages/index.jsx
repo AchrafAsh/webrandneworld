@@ -17,7 +17,7 @@ const IndexPage = () => {
                                 title='Mazing Day'
                                 className='transform hover:scale-125 transition-all duration-700'
                             />
-                            <span className='absolute bottom-14 inset-x-0 text-center text-white text-3xl'>
+                            <span className='font-lemon font-medium absolute bottom-14 inset-x-0 text-center text-white text-3xl'>
                                 Mazing Day
                             </span>
                         </div>
