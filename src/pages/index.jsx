@@ -4,43 +4,39 @@ import Layout from '../components/layout'
 
 // import mazingDayGif from '../images/mazing-day.gif'
 // import yakelMayersGif from '../images/yakel-mayers.gif'
-import cover from '../images/cover.png'
+import mazingDayGif from '../images/small_mazing_day.gif'
+import yakelMayersGif from '../images/small_yakel_mayers.gif'
 
 const IndexPage = () => {
     return (
         <Layout title='Home' hide>
-            <div className='w-full h-screen md:h-full flex justify-center items-center'>
-                <div className='w-full h-full flex flex-col md:flex-row justify-center items-center md:space-x-1'>
-                    <Link to='/mazing-day' className='h-1/2 md:h-auto'>
-                        <div className='max-h-full relative w-full overflow-hidden flex items-center justify-center'>
-                            <img
-                                src={cover}
-                                alt='Mazing Day'
-                                title='Mazing Day'
-                                className='bg-contain transform hover:scale-125 transition-all duration-700'
-                            />
-                            <span className='font-lemon absolute bottom-14 inset-x-0 text-center text-white text-3xl'>
-                                Mazing Day
-                            </span>
-                        </div>
-                    </Link>
-                    <Link to='/yakel-mayers' className='h-1/2 md:h-auto'>
-                        <div className='max-h-full relative w-full overflow-hidden flex items-center justify-center'>
-                            <img
-                                src={cover}
-                                alt='Yakel Mayers'
-                                title='Yakel Mayers'
-                                className='transform hover:scale-125 transition-all duration-700'
-                            />
-                            <span className='absolute bottom-14 inset-x-0 text-center text-white text-3xl'>
-                                Yakel Mayers
-                            </span>
-                        </div>
-                    </Link>
+            <div className='h-screen md:max-h-screen lg:p-12 lg:max-w-4xl lg:mx-auto'>
+                <div className='h-full w-full grid grid-cols-1 md:gap-2'>
+                    <ArtistCard
+                        href='/mazing-day'
+                        title='Mazing Day'
+                        image={mazingDayGif}
+                    />
+                    <ArtistCard
+                        href='/yakel-mayers'
+                        title='Yakel Mayers'
+                        image={yakelMayersGif}
+                    />
                 </div>
             </div>
         </Layout>
     )
 }
+
+const ArtistCard = ({ href, image, title }) => (
+    <Link to={href} className='w-full h-full overflow-hidden'>
+        <img
+            src={image}
+            alt={title}
+            title={title}
+            className='h-full w-full transform hover:scale-150 transition-all duration-700'
+        />
+    </Link>
+)
 
 export default IndexPage

@@ -11,7 +11,11 @@ export default ({ title, back, children, hide }) => {
     return (
         <div className='min-h-screen flex flex-col'>
             <SEO title={title} />
-            <main className='flex-1 flex flex-col-reverse sm:flex-row'>
+            <main
+                className={`flex-1 ${
+                    hide ? '' : 'flex flex-col-reverse sm:flex-row'
+                }`}
+            >
                 {!hide && (
                     <>
                         <div className='hidden sm:block'>
@@ -22,10 +26,14 @@ export default ({ title, back, children, hide }) => {
                         </div>
                     </>
                 )}
-                <section className={`w-full ${hide ? '' : 'sm:pl-24'}`}>
-                    {!hide && <div className='mb-12 sm:mb-0' />}
-                    {children}
-                </section>
+                {hide ? (
+                    <>{children}</>
+                ) : (
+                    <section className={`w-full ${hide ? '' : 'sm:pl-24'}`}>
+                        {!hide && <div className='mb-12 sm:mb-0' />}
+                        {children}
+                    </section>
+                )}
             </main>
             <Footer />
         </div>
