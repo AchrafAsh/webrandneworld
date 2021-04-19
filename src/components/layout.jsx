@@ -1,12 +1,11 @@
 import * as React from 'react'
 import { Topbar, Sidebar } from './sidebar'
-import Footer from './footer'
 import SEO from './SEO'
 
 export default ({ title, back, children, hide }) => {
     let artist
-    if (title == 'Yakel Mayers') artist = 'yakel-mayers'
-    if (title == 'Mazing Day') artist = 'mazing-day'
+    if (title === 'Yakel Mayers') artist = 'yakel-mayers'
+    if (title === 'Mazing Day') artist = 'mazing-day'
 
     return (
         <div className='min-h-screen flex flex-col'>
@@ -35,7 +34,6 @@ export default ({ title, back, children, hide }) => {
                     </section>
                 )}
             </main>
-            <Footer />
         </div>
     )
 }
