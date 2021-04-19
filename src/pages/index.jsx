@@ -10,8 +10,8 @@ import yakelMayersGif from '../images/small_yakel_mayers.gif'
 const IndexPage = () => {
     return (
         <Layout title='Home' hide>
-            <div className='h-screen md:max-h-screen lg:p-12 lg:max-w-4xl lg:mx-auto'>
-                <div className='h-full w-full grid grid-cols-1 md:gap-2'>
+            <div className='h-screen md:max-h-screen md:p-24 lg:max-w-7xl lg:mx-auto'>
+                <div className='h-full w-full grid grid-cols-1 md:grid-cols-2 md:gap-1'>
                     <ArtistCard
                         href='/mazing-day'
                         title='Mazing Day'
@@ -29,13 +29,8 @@ const IndexPage = () => {
 }
 
 const ArtistCard = ({ href, image, title }) => (
-    <Link to={href} className='w-full h-full overflow-hidden'>
-        <img
-            src={image}
-            alt={title}
-            title={title}
-            className='h-full w-full transform hover:scale-150 transition-all duration-700'
-        />
+    <Link to={href} className='w-full h-full'>
+        <img src={image} alt={title} title={title} className='h-full w-full' />
     </Link>
 )
 
