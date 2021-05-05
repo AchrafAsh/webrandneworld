@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 
 // import mazingDayGif from '../images/mazing-day.gif'
 // import yakelMayersGif from '../images/yakel-mayers.gif'
-import mazingDayGif from '../images/small_mazing_day.gif'
+import mazingDayGif from '../images/3d_model.gif'
 import yakelMayersGif from '../images/small_yakel_mayers.gif'
 
 const IndexPage = () => {
