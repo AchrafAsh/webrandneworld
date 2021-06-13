@@ -10,6 +10,11 @@
     /* src: url('./fonts/lemon_milk/LEMONMILK-LightItalic.otf'); */
 }
 
+@font-face {
+    font-family: 'Bebas';
+    src: url('./fonts/bebas/Bebas-Regular.otf');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -4,7 +4,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                lemon: 'Lemon Milk'
+                lemon: 'Lemon Milk',
+                bebas: 'Bebas'
             }
         }
     },

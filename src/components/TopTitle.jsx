@@ -1,16 +1,12 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 
-export default ({ artist }) => (
-    <div className='text-2xl px-6 pt-12'>
-        {artist === 'yakel-mayers' ? (
-            <Link to='/yakel-mayers'>
-                <h1>Yakel Mayers</h1>
-            </Link>
-        ) : (
-            <Link to='/mazing-day'>
-                <h1>Mazing Day</h1>
-            </Link>
-        )}
+const capitalize = (s) =>
+    (s && s[0].toUpperCase() + s.slice(1)).replace('-', ' ') || ''
+
+const TopTitle = ({ artist, classes }) => (
+    <div className='text-3xl px-6 pt-12'>
+        <h1 className={classes}>{capitalize(artist)}</h1>
     </div>
 )
+
+export default TopTitle

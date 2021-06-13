@@ -29,8 +29,8 @@ export const data = graphql`
 export default ({ data }) => {
     return (
         <Layout title='Yakel Mayers' back>
-            <div className='flex flex-col items-center'>
-                <TopTitle artist='yakel-mayers' />
+            <div className='flex flex-col items-center font-bebas'>
+                <TopTitle artist='yakel-mayers' classes='text-5xl' />
                 {data && <CoverList covers={data.covers} />}
             </div>
         </Layout>
