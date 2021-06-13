@@ -2,25 +2,20 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 
-// import mazingDayGif from '../images/mazing-day.gif'
-// import yakelMayersGif from '../images/yakel-mayers.gif'
-import mazingDayGif from '../images/3d_model.gif'
-import yakelMayersGif from '../images/small_yakel_mayers.gif'
-
 const IndexPage = () => {
     return (
         <Layout title='Home' hide>
-            <div className='h-screen md:max-h-screen md:p-24 lg:max-w-7xl lg:mx-auto'>
-                <div className='h-full w-full grid grid-cols-1 md:grid-cols-2 md:gap-1'>
+            <div className='h-screen md:p-24 lg:max-w-8xl lg:mx-auto'>
+                <div className='grid grid-cols-1 justify-items-stretch md:grid-cols-2 h-full'>
                     <ArtistCard
                         href='/mazing-day'
                         title='Mazing Day'
-                        image={mazingDayGif}
+                        image='/MAZING_DAY.gif'
                     />
                     <ArtistCard
                         href='/yakel-mayers'
                         title='Yakel Mayers'
-                        image={yakelMayersGif}
+                        image='/MAZING_DAY.gif'
                     />
                 </div>
             </div>
@@ -29,8 +24,13 @@ const IndexPage = () => {
 }
 
 const ArtistCard = ({ href, image, title }) => (
-    <Link to={href} className='w-full h-full'>
-        <img src={image} alt={title} title={title} className='h-full w-full' />
+    <Link to={href}>
+        <div
+            className='h-full w-full bg-center bg-cover bg-no-repeat'
+            style={{ backgroundImage: `url(${image})` }}
+            alt={title}
+            title={title}
+        />
     </Link>
 )
 
