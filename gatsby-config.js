@@ -3,7 +3,7 @@ module.exports = {
         title: 'Mazing Day & Yakel Mayers',
         titleTemplate: '%s · Mazing Day & Yakel Mayers',
         description: 'The Official website of Mazing Day and Yakel Mayers.',
-        url: 'https://mazingandyakel.netlify.app', // No trailing slash allowed!
+        url: 'https://webrandneworld.com', // No trailing slash allowed!
         image: '/Logo.png' // Path to your image you placed in the 'static' folder
         // twitterUsername: '@occlumency'
     },

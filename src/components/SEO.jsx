@@ -49,7 +49,7 @@ const SEO = ({ title, description, image, article }) => {
     )
 }
 
-const query = graphql`
+export const query = graphql`
     query SEO {
         site {
             siteMetadata {
