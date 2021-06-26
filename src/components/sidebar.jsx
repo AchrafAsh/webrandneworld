@@ -5,13 +5,17 @@ function getLinks(artist) {
     if (artist === 'yakel-mayers')
         return {
             twitter: 'https://twitter.com/yakelmayers',
-            instagram: 'https://www.instagram.com/yakelmayers'
+            instagram: 'https://www.instagram.com/yakelmayers',
+            youtube:
+                'https://www.youtube.com/channel/UCjEgc4I-LdR5oBzGboHTKag/featured'
         }
 
     if (artist === 'mazing-day')
         return {
             twitter: 'https://twitter.com/CrewKanikule',
             instagram: 'https://www.instagram.com/mazingday/',
+            youtube:
+                'https://www.youtube.com/channel/UCjEgc4I-LdR5oBzGboHTKag/featured',
             music: 'https://li.sten.to/OyDDCG4'
         }
     else throw Error(`${artist} does not exist`)
