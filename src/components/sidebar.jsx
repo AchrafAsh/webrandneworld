@@ -11,7 +11,8 @@ function getLinks(artist) {
     if (artist === 'mazing-day')
         return {
             twitter: 'https://twitter.com/CrewKanikule',
-            instagram: 'https://www.instagram.com/mazingday/'
+            instagram: 'https://www.instagram.com/mazingday/',
+            music: 'https://li.sten.to/OyDDCG4'
         }
     else throw Error(`${artist} does not exist`)
 }
