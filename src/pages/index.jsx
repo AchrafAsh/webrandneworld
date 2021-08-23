@@ -5,10 +5,7 @@ import Layout from '../components/layout'
 const IndexPage = () => {
     return (
         <Layout title='Home' hide>
-            <div
-                className='h-screen md:p-24 lg:max-w-8xl lg:mx-auto bg-cover bg-center bg-no-repeat'
-                style={{ backgroundImage: `url(/background.gif)` }}
-            >
+            <div className='h-screen md:p-24 lg:max-w-8xl lg:mx-auto'>
                 <div className='grid grid-cols-1 justify-items-stretch md:grid-cols-2 h-full'>
                     <ArtistCard
                         href='/mazing-day'

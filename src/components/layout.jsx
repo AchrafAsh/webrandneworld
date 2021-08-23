@@ -8,7 +8,10 @@ export default ({ title, back, children, hide }) => {
     if (title === 'Mazing Day') artist = 'mazing-day'
 
     return (
-        <div className='min-h-screen flex flex-col'>
+        <div
+            className='min-h-screen flex flex-col bg-cover bg-center bg-no-repeat'
+            style={{ backgroundImage: hide ? '' : `url(/background.gif)` }}
+        >
             <SEO title={title} />
             <main
                 className={`flex-1 ${
