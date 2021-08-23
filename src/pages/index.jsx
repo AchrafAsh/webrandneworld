@@ -5,7 +5,10 @@ import Layout from '../components/layout'
 const IndexPage = () => {
     return (
         <Layout title='Home' hide>
-            <div className='h-screen md:p-24 lg:max-w-8xl lg:mx-auto'>
+            <div
+                className='h-screen md:p-24 lg:max-w-8xl lg:mx-auto bg-cover bg-center bg-no-repeat'
+                style={{ backgroundImage: `url(/background.gif)` }}
+            >
                 <div className='grid grid-cols-1 justify-items-stretch md:grid-cols-2 h-full'>
                     <ArtistCard
                         href='/mazing-day'
@@ -15,7 +18,7 @@ const IndexPage = () => {
                     <ArtistCard
                         href='/yakel-mayers'
                         title='Yakel Mayers'
-                        image='/MAZING_DAY.gif'
+                        image='/yakel_mayers.gif'
                     />
                 </div>
             </div>
