@@ -121,7 +121,7 @@ export const Sidebar = ({ back, artist }) => (
 )
 
 export const Topbar = ({ back, artist }) => (
-    <div className='absolute z-10 top-0 inset-x-0 p-6 bg-white'>
+    <div className='absolute z-10 top-0 inset-x-0 p-6'>
         {back && (
             <Link to='/'>
                 <div className='absolute top-6 left-6'>
