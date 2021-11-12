@@ -10,7 +10,7 @@ const IndexPage = () => {
                     <ArtistCard
                         href='/mazing-day'
                         title='Mazing Day'
-                        image='/MAZING_DAY.gif'
+                        image='/mazing_day.gif'
                     />
                     <ArtistCard
                         href='/yakel-mayers'
