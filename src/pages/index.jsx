@@ -5,21 +5,6 @@ import LoadingScreen from '../components/LoadingScreen'
 
 
 const IndexPage = () => {
-    const [loading, setLoading] = React.useState({ yakelMayers:true, mazingDay:true })
-
-    React.useEffect(() => {
-        const mazingDayThumbnail = new Image()
-        const yakelMayersThumbnail = new Image()
-
-        mazingDayThumbnail.onload = () => { setLoading(prev => ({...prev, mazingDay:false}))}
-        yakelMayersThumbnail.onload = () => { setLoading(prev => ({...prev, yakelMayers: false})) }
-
-        mazingDayThumbnail.src = 'mazing_day_thumbnail.png'
-        yakelMayersThumbnail.src = 'yakel_mayers_thumbnail.png'
-    })
-
-    if (loading.yakelMayers || loading.mazingDay) return <LoadingScreen />
-
     return (
         <Layout title='Home' hide>
             <div className='h-screen md:p-24 lg:max-w-8xl lg:mx-auto'>
