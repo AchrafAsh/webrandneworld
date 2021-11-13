@@ -95,7 +95,7 @@ export const Sidebar = ({ back, artist }) => (
     <div className='fixed flex flex-col items-center justify-center space-y-12 px-8 lg:px-12 py-24 h-screen'>
         {back && (
             <Link to='/'>
-                <div className='absolute top-4 left-4 lg:top-10 lg:left-10 flex flex-col space-y-1 items-center text-center'>
+                <div className='absolute top-4 left-4 lg:top-10 lg:left-8 flex flex-col space-y-1 items-center text-center'>
                     <svg
                         className='w-6 fill-current'
                         xmlns='http://www.w3.org/2000/svg'
