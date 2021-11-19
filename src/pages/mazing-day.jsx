@@ -13,6 +13,9 @@ export const data = graphql`
                     type
                     youtube
                     image {
+                        file {
+                            url
+                        }
                         fixed(width: 250, height: 200) {
                             ...GatsbyContentfulFixed
                         }
