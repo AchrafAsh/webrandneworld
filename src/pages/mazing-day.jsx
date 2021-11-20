@@ -5,7 +5,7 @@ import { TopTitle, CoverList } from '../components/index'
 
 export const data = graphql`
     {
-        covers: allContentfulCover(filter: { artist: { eq: "Mazing Day" } }) {
+        covers: allContentfulCover(filter: { artist: { eq: "Mazing Day" } }, sort: {order: ASC, fields: ordre}) {
             edges {
                 node {
                     id

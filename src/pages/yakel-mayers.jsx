@@ -5,7 +5,7 @@ import { CoverList, TopTitle } from '../components/index'
 
 export const data = graphql`
     {
-        covers: allContentfulCover(filter: { artist: { eq: "Yakel Mayers" } }) {
+        covers: allContentfulCover(filter: { artist: { eq: "Yakel Mayers" } }, sort: {order: ASC, fields: ordre}) {
             edges {
                 node {
                     id
@@ -13,6 +13,9 @@ export const data = graphql`
                     type
                     youtube
                     image {
+                        file {
+                            url
+                        }
                         fixed(width: 250, height: 200) {
                             ...GatsbyContentfulFixed
                         }
