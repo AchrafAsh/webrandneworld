@@ -7,7 +7,8 @@ function getLinks(artist) {
             twitter: 'https://twitter.com/yakelmayers',
             instagram: 'https://www.instagram.com/yakelmayers',
             youtube:
-                'https://www.youtube.com/channel/UCjEgc4I-LdR5oBzGboHTKag/featured'
+                'https://www.youtube.com/channel/UCjEgc4I-LdR5oBzGboHTKag/featured',
+            music: 'https://li.sten.to/SOONERORLATER'
         }
 
     if (artist === 'mazing-day')
@@ -16,7 +17,7 @@ function getLinks(artist) {
             instagram: 'https://www.instagram.com/mazingday/',
             youtube:
                 'https://www.youtube.com/channel/UCjEgc4I-LdR5oBzGboHTKag/featured',
-            music: 'https://li.sten.to/OyDDCG4'
+            music: 'https://li.sten.to/FRsnFPX'
         }
     else throw Error(`${artist} does not exist`)
 }
